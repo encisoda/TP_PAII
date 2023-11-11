@@ -40,7 +40,7 @@ advertencia 6002: La tabla o vista 'PELICULAS.dbo.Usuarios' no tiene definida ni
           <Property Name="usuario" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="pass" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Peliculas__idGen__2B3F6F97">
+        <Association Name="FK__Peliculas__idGen__276EDEB3">
           <End Role="Generos" Type="Self.Generos" Multiplicity="1" />
           <End Role="Peliculas" Type="Self.Peliculas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -52,7 +52,7 @@ advertencia 6002: La tabla o vista 'PELICULAS.dbo.Usuarios' no tiene definida ni
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Peliculas__idGen__2E1BDC42">
+        <Association Name="FK__Peliculas__idGen__286302EC">
           <End Role="Generos" Type="Self.Generos" Multiplicity="1" />
           <End Role="Peliculas" Type="Self.Peliculas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -86,11 +86,11 @@ advertencia 6002: La tabla o vista 'PELICULAS.dbo.Usuarios' no tiene definida ni
     [Usuarios].[pass] AS [pass]
     FROM [dbo].[Usuarios] AS [Usuarios]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK__Peliculas__idGen__2B3F6F97" Association="Self.FK__Peliculas__idGen__2B3F6F97">
+          <AssociationSet Name="FK__Peliculas__idGen__276EDEB3" Association="Self.FK__Peliculas__idGen__276EDEB3">
             <End Role="Generos" EntitySet="Generos" />
             <End Role="Peliculas" EntitySet="Peliculas" />
           </AssociationSet>
-          <AssociationSet Name="FK__Peliculas__idGen__2E1BDC42" Association="Self.FK__Peliculas__idGen__2E1BDC42">
+          <AssociationSet Name="FK__Peliculas__idGen__286302EC" Association="Self.FK__Peliculas__idGen__286302EC">
             <End Role="Generos" EntitySet="Generos" />
             <End Role="Peliculas" EntitySet="Peliculas" />
           </AssociationSet>

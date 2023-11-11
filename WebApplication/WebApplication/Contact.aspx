@@ -7,16 +7,44 @@
         <asp:Button ID="Button4" runat="server" Text="ListarPelis" OnClick="Button4_Click" />
         <asp:TextBox ID="TextLista" runat="server"></asp:TextBox>
     </h2>
-    <h3>Your contact page.</h3>
-    <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
-        <abbr title="Phone">P:</abbr>
-        425.555.0100
-    </address>
+    <h2>Grupo: 3</h2>
 
-    <address>
-        <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-        <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-    </address>
+    <div class="contact">
+        <div class="contact-item">
+            <img src="img/alexis.PNG" alt="Imagen de Alexis Ricardo Burgos" width="100" height="100">
+            </br>
+            <span>Burgos,</br> Alexis Ricardo</span>
+        </div>
+
+        <div class="contact-item">
+            <img src="img/daniel.PNG" alt="Imagen de Daniel Agustin Enciso Villalba" width="100" height="100">
+            </br>
+            <span>Enciso Villalba,</br> Daniel Agustin</span>
+        </div>
+
+        <div class="contact-item">
+            <img src="img/sergio.PNG" alt="Imagen de Sergio Luna" width="100" height="100">
+            </br>
+            <span>Luna,</br> Sergio</span>
+        </div>
+
+        <div class="contact-item">
+            <img src="img/leandro.PNG" alt="Imagen de Leandro Fabián Politano" width="100" height="100">
+            </br>
+            <span>Politano,</br> Leandro Fabián</span>
+        </div>
+
+        <div class="contact-item">
+            <img src="img/mauro.PNG" alt="Imagen de Mauro Ariel Politano" width="100" height="100">
+            </br>
+            <span>Politano,</br> Mauro Ariel</span>
+        </div>
+    </div>
+
+    <style>
+    .contact-item {
+        display: inline-block;
+        margin-right: 20px; 
+    }
+    </style>
 </asp:Content>

@@ -10,3 +10,15 @@ C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\obj\Debug\Datos.csproj.CoreCo
 C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\obj\Debug\Datos.csproj.CopyComplete
 C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\obj\Debug\Datos.dll
 C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\obj\Debug\Datos.pdb
+D:\Repositorios\TP_PAII\WebApplication\Datos\bin\Debug\Datos.dll.config
+D:\Repositorios\TP_PAII\WebApplication\Datos\bin\Debug\Datos.dll
+D:\Repositorios\TP_PAII\WebApplication\Datos\bin\Debug\Datos.pdb
+D:\Repositorios\TP_PAII\WebApplication\Datos\bin\Debug\EntityFramework.dll
+D:\Repositorios\TP_PAII\WebApplication\Datos\bin\Debug\EntityFramework.SqlServer.dll
+D:\Repositorios\TP_PAII\WebApplication\Datos\bin\Debug\EntityFramework.xml
+D:\Repositorios\TP_PAII\WebApplication\Datos\bin\Debug\EntityFramework.SqlServer.xml
+D:\Repositorios\TP_PAII\WebApplication\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+D:\Repositorios\TP_PAII\WebApplication\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+D:\Repositorios\TP_PAII\WebApplication\Datos\obj\Debug\Datos.csproj.CopyComplete
+D:\Repositorios\TP_PAII\WebApplication\Datos\obj\Debug\Datos.dll
+D:\Repositorios\TP_PAII\WebApplication\Datos\obj\Debug\Datos.pdb

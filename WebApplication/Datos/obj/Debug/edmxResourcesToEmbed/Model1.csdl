@@ -46,23 +46,12 @@
       <End Role="Peliculas" EntitySet="Peliculas" />
       <End Role="Peliculas1" EntitySet="Peliculas" />
     </AssociationSet>
-    <EntitySet Name="sysdiagrams" EntityType="PELICULASModel.sysdiagrams" />
     <AssociationSet Name="FK__Peliculas__idGen__46E78A0C" Association="PELICULASModel.FK__Peliculas__idGen__46E78A0C">
       <End Role="Generos" EntitySet="Generos" />
       <End Role="Peliculas" EntitySet="Peliculas" />
     </AssociationSet>
     <EntitySet Name="Usuarios" EntityType="PELICULASModel.Usuarios" />
   </EntityContainer>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
-  </EntityType>
   <Association Name="FK__Peliculas__idGen__46E78A0C">
     <End Type="PELICULASModel.Generos" Role="Generos" Multiplicity="1" />
     <End Type="PELICULASModel.Peliculas" Role="Peliculas" Multiplicity="*" />

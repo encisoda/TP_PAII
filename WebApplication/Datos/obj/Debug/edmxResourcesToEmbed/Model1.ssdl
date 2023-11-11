@@ -11,7 +11,7 @@
     <Key>
       <PropertyRef Name="idPelicula" />
     </Key>
-    <Property Name="idPelicula" Type="int" Nullable="false" />
+    <Property Name="idPelicula" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="idGenero" Type="int" Nullable="false" />
     <Property Name="titulo" Type="varchar" MaxLength="50" />
     <Property Name="estreno" Type="datetime" />
@@ -22,16 +22,6 @@
     <Property Name="Idioma" Type="varchar" MaxLength="50" />
     <Property Name="restricción" Type="int" />
     <Property Name="productora" Type="varchar" MaxLength="50" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <!--Errores durante la generación:
 advertencia 6002: La tabla o vista 'PELICULAS.dbo.Usuarios' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
@@ -45,7 +35,19 @@ advertencia 6002: La tabla o vista 'PELICULAS.dbo.Usuarios' no tiene definida ni
     <Property Name="usuario" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="pass" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <Association Name="FK__Peliculas__idGen__46E78A0C">
+  <Association Name="FK__Peliculas__idGen__2B3F6F97">
+    <End Role="Generos" Type="Self.Generos" Multiplicity="1" />
+    <End Role="Peliculas" Type="Self.Peliculas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Generos">
+        <PropertyRef Name="idGenero" />
+      </Principal>
+      <Dependent Role="Peliculas">
+        <PropertyRef Name="idGenero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Peliculas__idGen__2E1BDC42">
     <End Role="Generos" Type="Self.Generos" Multiplicity="1" />
     <End Role="Peliculas" Type="Self.Peliculas" Multiplicity="*" />
     <ReferentialConstraint>
@@ -72,7 +74,6 @@ advertencia 6002: La tabla o vista 'PELICULAS.dbo.Usuarios' no tiene definida ni
   <EntityContainer Name="PELICULASModelStoreContainer">
     <EntitySet Name="Generos" EntityType="Self.Generos" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Peliculas" EntityType="Self.Peliculas" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuarios" EntityType="Self.Usuarios" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
     [Usuarios].[idUsuario] AS [idUsuario], 
@@ -80,7 +81,11 @@ advertencia 6002: La tabla o vista 'PELICULAS.dbo.Usuarios' no tiene definida ni
     [Usuarios].[pass] AS [pass]
     FROM [dbo].[Usuarios] AS [Usuarios]</DefiningQuery>
     </EntitySet>
-    <AssociationSet Name="FK__Peliculas__idGen__46E78A0C" Association="Self.FK__Peliculas__idGen__46E78A0C">
+    <AssociationSet Name="FK__Peliculas__idGen__2B3F6F97" Association="Self.FK__Peliculas__idGen__2B3F6F97">
+      <End Role="Generos" EntitySet="Generos" />
+      <End Role="Peliculas" EntitySet="Peliculas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Peliculas__idGen__2E1BDC42" Association="Self.FK__Peliculas__idGen__2E1BDC42">
       <End Role="Generos" EntitySet="Generos" />
       <End Role="Peliculas" EntitySet="Peliculas" />
     </AssociationSet>

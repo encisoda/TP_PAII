@@ -27,7 +27,6 @@ namespace Datos
     
         public virtual DbSet<Generos> Generos { get; set; }
         public virtual DbSet<Peliculas> Peliculas { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
     }
 }

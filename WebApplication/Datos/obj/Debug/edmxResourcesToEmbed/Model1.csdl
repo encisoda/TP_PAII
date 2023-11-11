@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PELICULASModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Generos">
+    <Key>
+      <PropertyRef Name="idGenero" />
+    </Key>
+    <Property Name="idGenero" Type="Int32" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Peliculas" Relationship="PELICULASModel.FK__Peliculas__idGen__46E78A0C" FromRole="Generos" ToRole="Peliculas" />
+  </EntityType>
+  <EntityType Name="Peliculas">
+    <Key>
+      <PropertyRef Name="idPelicula" />
+    </Key>
+    <Property Name="idPelicula" Type="Int32" Nullable="false" />
+    <Property Name="idGenero" Type="Int32" Nullable="false" />
+    <Property Name="titulo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="estreno" Type="DateTime" Precision="3" />
+    <Property Name="pais" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="duracion" Type="Int32" />
+    <Property Name="director" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="calificación" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Idioma" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="restricción" Type="Int32" />
+    <Property Name="productora" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Peliculas1" Relationship="Self.FK_Peliculas_Peliculas" FromRole="Peliculas" ToRole="Peliculas1" />
+    <NavigationProperty Name="Peliculas2" Relationship="Self.FK_Peliculas_Peliculas" FromRole="Peliculas1" ToRole="Peliculas" />
+    <NavigationProperty Name="Generos" Relationship="PELICULASModel.FK__Peliculas__idGen__46E78A0C" FromRole="Peliculas" ToRole="Generos" />
+  </EntityType>
+  <Association Name="FK_Peliculas_Peliculas">
+    <End Role="Peliculas" Type="Self.Peliculas" Multiplicity="1" />
+    <End Role="Peliculas1" Type="Self.Peliculas" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Peliculas">
+        <PropertyRef Name="idPelicula" />
+      </Principal>
+      <Dependent Role="Peliculas1">
+        <PropertyRef Name="idPelicula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Context" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Generos" EntityType="Self.Generos" />
+    <EntitySet Name="Peliculas" EntityType="Self.Peliculas" />
+    <AssociationSet Name="FK_Peliculas_Peliculas" Association="Self.FK_Peliculas_Peliculas">
+      <End Role="Peliculas" EntitySet="Peliculas" />
+      <End Role="Peliculas1" EntitySet="Peliculas" />
+    </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="PELICULASModel.sysdiagrams" />
+    <AssociationSet Name="FK__Peliculas__idGen__46E78A0C" Association="PELICULASModel.FK__Peliculas__idGen__46E78A0C">
+      <End Role="Generos" EntitySet="Generos" />
+      <End Role="Peliculas" EntitySet="Peliculas" />
+    </AssociationSet>
+    <EntitySet Name="Usuarios" EntityType="PELICULASModel.Usuarios" />
+  </EntityContainer>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__Peliculas__idGen__46E78A0C">
+    <End Type="PELICULASModel.Generos" Role="Generos" Multiplicity="1" />
+    <End Type="PELICULASModel.Peliculas" Role="Peliculas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Generos">
+        <PropertyRef Name="idGenero" />
+      </Principal>
+      <Dependent Role="Peliculas">
+        <PropertyRef Name="idGenero" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="idUsuario" />
+      <PropertyRef Name="usuario" />
+      <PropertyRef Name="pass" />
+    </Key>
+    <Property Name="idUsuario" Type="Int32" Nullable="false" />
+    <Property Name="usuario" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="pass" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

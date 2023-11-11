@@ -1,0 +1,12 @@
+C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\bin\Debug\Datos.dll.config
+C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\bin\Debug\Datos.dll
+C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\bin\Debug\Datos.pdb
+C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\bin\Debug\EntityFramework.dll
+C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\bin\Debug\EntityFramework.xml
+C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache
+C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\obj\Debug\Datos.dll
+C:\Users\SSPV\Desktop\PAII\TP\WebApplication\Datos\obj\Debug\Datos.pdb

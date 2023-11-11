@@ -1,0 +1,15 @@
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\bin\Debug\Servicio.dll.config
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\bin\Debug\Servicio.dll
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\bin\Debug\Servicio.pdb
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\bin\Debug\Datos.dll
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\bin\Debug\EntityFramework.dll
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\bin\Debug\Datos.pdb
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\bin\Debug\Datos.dll.config
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\bin\Debug\EntityFramework.xml
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\obj\Debug\Servicio.csproj.AssemblyReference.cache
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\obj\Debug\Servicio.csproj.CoreCompileInputs.cache
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\obj\Debug\Servicio.csproj.CopyComplete
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\obj\Debug\Servicio.dll
+C:\Users\SSPV\Desktop\PAII\TP\Servicio\obj\Debug\Servicio.pdb

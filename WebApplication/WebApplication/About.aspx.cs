@@ -20,37 +20,23 @@ namespace WebApplication
             }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void BtnCreate_Click(object sender, EventArgs e)
         {
-            var p = new Pelicula()
-            {
-                titulo = tbtitulo.Text,
-                genero = ddgenero.Text,
-                Estreno = tbestreno.Text,
-                Pais = tbpais.Text,
-                Duracion = int.Parse(tbduracion.Text),
-                Director = tbdirector.Text,
-                Calificacion = tbcalificacion.Text,
-                Idioma = tbidioma.Text,
-                Restriccion = int.Parse(tbrestriccion.Text),
-                Productora = tbproductora.Text
-            };
-
-            PeliculaService.agregarPelicula(p);
-            this.actualziarTabla();
-
+            Response.Redirect("ABM.aspx?op=A");
         }
-
-        protected void ButtonEliminar_Click(object sender, EventArgs e)
-        {
-            PeliculaService.eliminarPelicula(4);
-            this.actualziarTabla();
-        }
-
 
         protected void ButtonFiltrar_Click(object sender, EventArgs e)
         {
             this.filtrarTabla();
+        }
+
+        protected void BtnModificar_Click(object sender, EventArgs e)
+        {
+            string id;
+            LinkButton BtnConsultar = (LinkButton)sender;
+            GridViewRow selectedrow = (GridViewRow)BtnConsultar.NamingContainer;
+            id = selectedrow.Cells[0].Text;
+            Response.Redirect("ABM.aspx?id=" + id + "&op=M");
         }
 
 
@@ -72,10 +58,21 @@ namespace WebApplication
             foreach (Pelicula peli in PeliculaService.listarPeliculas())
                 ListaPeliculas.Add(peli);
 
-            var listaFiltra = ListaPeliculas.Where(p => p.titulo.IndexOf(TextBoxFilterTitulo.Text, StringComparison.OrdinalIgnoreCase) >= 0).ToList();   
+            var listaFiltra = ListaPeliculas.Where(p => p.titulo.IndexOf(TextBoxFilterTitulo.Text, StringComparison.OrdinalIgnoreCase) >= 0
+            && p.genero.IndexOf(DropDownListFiltro.Text, StringComparison.OrdinalIgnoreCase) >= 0).ToList();   
 
             GridViewPeliculas.DataSource = listaFiltra;
             GridViewPeliculas.DataBind();
+        }
+
+        protected void BtnBorrar_Click(object sender, EventArgs e)
+        {
+            int id;
+            LinkButton BtnConsultar = (LinkButton)sender;
+            GridViewRow selectedrow = (GridViewRow)BtnConsultar.NamingContainer;
+            id = int.Parse(selectedrow.Cells[0].Text);
+            PeliculaService.eliminarPelicula(id);
+            this.actualziarTabla();
         }
 
     }

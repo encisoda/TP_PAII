@@ -33,3 +33,4 @@ C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\WebApplication\Datos\obj\Debug\Datos.c
 C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\WebApplication\Datos\obj\Debug\Datos.csproj.CopyComplete
 C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\WebApplication\Datos\obj\Debug\Datos.dll
 C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\WebApplication\Datos\obj\Debug\Datos.pdb
+C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\WebApplication\Datos\obj\Debug\Datos.csproj.AssemblyReference.cache

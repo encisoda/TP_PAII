@@ -68,7 +68,7 @@ namespace WebApplication
             foreach (Pelicula peli in PeliculaService.listarPeliculas())
                 pelis += peli.titulo;
             
-            TextLista.Text = pelis;
+            //TextLista.Text = pelis;
         }
     }
 }

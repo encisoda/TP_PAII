@@ -9,14 +9,12 @@
         <asp:ListBox ID="ListBox1" runat="server" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged"></asp:ListBox>
         <asp:TextBox ID="TextLista" runat="server"></asp:TextBox>
     </h2>
-    <p>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+    <p>Usuario<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+    </p>
+    <p>Password<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
     </p>
     <p>
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-    </p>
-    <p>
-        <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="Button" />
+        <asp:Button ID="Button6" runat="server" OnClick="Button6_Click" Text="Validar Login" />
     </p>
     <p>
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>

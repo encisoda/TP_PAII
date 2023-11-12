@@ -88,8 +88,8 @@ namespace WebApplication
         protected void Button6_Click(object sender, EventArgs e)
         {
 
-            Label1.Text = UsuarioService.validarLogin(TextBox1.Text, TextBox2.Text).Item1;
-            Label2.Text = UsuarioService.validarLogin(TextBox1.Text, TextBox2.Text).Item2.ToString();
+            //Label1.Text = UsuarioService.validarLogin(TextBox1.Text, TextBox2.Text).Item1;
+            //Label2.Text = UsuarioService.validarLogin(TextBox1.Text, TextBox2.Text).Item2.ToString();
         }
     }
 }

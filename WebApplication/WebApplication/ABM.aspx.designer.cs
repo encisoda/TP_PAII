@@ -24,22 +24,13 @@ namespace WebApplication
         protected global::System.Web.UI.WebControls.Label lbltitulo;
 
         /// <summary>
-        /// Control tbtitulo.
+        /// Control ControlFormulario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox tbtitulo;
-
-        /// <summary>
-        /// Control rfvTitulo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvTitulo;
+        protected global::WebApplication.ControlFormulario ControlFormulario;
 
         /// <summary>
         /// Control ddgenero.

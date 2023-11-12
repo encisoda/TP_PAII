@@ -52,7 +52,8 @@ namespace WebApplication
         {
             var p = new Pelicula()
             {
-                titulo = tbtitulo.Text,
+                //titulo = tbtitulo.Text,
+                titulo = ControlFormulario.tbtituloResultado,
                 genero = ddgenero.Text,
                 Estreno = tbestreno.Text,
                 Pais = tbpais.Text,
@@ -75,7 +76,8 @@ namespace WebApplication
             var pelicula = new Pelicula()
             {
                 idPelicula = int.Parse(Request.QueryString["id"]),
-                titulo = tbtitulo.Text,
+                //titulo = tbtitulo.Text,
+                titulo = ControlFormulario.tbtituloResultado,
                 genero = ddgenero.Text,
                 Estreno = tbestreno.Text,
                 Pais = tbpais.Text,
@@ -107,7 +109,8 @@ namespace WebApplication
 
             pelicula = ListaPeliculas.Where(p => p.idPelicula == int.Parse(id)).FirstOrDefault();
 
-            tbtitulo.Text = pelicula.titulo;
+            ControlFormulario.tbtituloResultado = pelicula.titulo;
+            //tbtitulo.Text = pelicula.titulo;
             ddgenero.SelectedValue = pelicula.genero;
             //tbestreno.Text = pelicula.Estreno.ToString("yyyy-MM-dd");
             tbestreno.Text = DateTime.Now.ToString(pelicula.Estreno);

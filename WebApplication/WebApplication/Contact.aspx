@@ -5,8 +5,10 @@
         <asp:Button ID="Button2" runat="server" Text="Updatear Peli" OnClick="Button2_Click" />
         <asp:Button ID="Button3" runat="server" Text="Eliminar Peli" OnClick="Button3_Click1" />
         <asp:Button ID="Button4" runat="server" Text="ListarPelis" OnClick="Button4_Click" />
+        <asp:Button ID="Button5" runat="server" OnClick="Button5_Click" Text="Cargar Generos" />
+        <asp:ListBox ID="ListBox1" runat="server" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged"></asp:ListBox>
         <asp:TextBox ID="TextLista" runat="server"></asp:TextBox>
-    </h2>--%>
+    </h2>
     <h2>Grupo: 3</h2>
 
     <div class="contact">

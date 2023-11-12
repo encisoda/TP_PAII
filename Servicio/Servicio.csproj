@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GeneroService.cs" />
+    <Compile Include="UsuarioService.cs" />
     <Compile Include="PeliculaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

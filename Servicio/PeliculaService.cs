@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace Servicio
 {
-
+    //Esta Clase la usamos para crear el objeto persona con los datos
+    //que vienen de la vista
     public class Pelicula
     {
         public int idPelicula { get; set; }
@@ -50,29 +51,22 @@ namespace Servicio
         public static void agregarPelicula(Pelicula pelicula){
 
             Context ctx = new Context();
-            Peliculas peli = new Peliculas();
+            Peliculas newPeli = new Peliculas();
 
-            Generos gen = (from g in ctx.Generos
-                       where g.descripcion == pelicula.genero
-                       select g).FirstOrDefault();
-            
+            Generos gen = GeneroService.getGeneroByDesc(pelicula.genero);
+                       
+            Peliculas peli = PeliculaService.setDatosPeli(newPeli, pelicula, gen.idGenero);
 
-            Peliculas p = PeliculaService.setDatosPeli(peli,pelicula, gen.idGenero);
-
-            ctx.Peliculas.Add(p);
+            ctx.Peliculas.Add(peli);
             ctx.SaveChanges();  
         }
 
         public static void actualizarPelicula(Pelicula pelicula) {
             Context ctx = new Context();
 
-            Generos gen = (from g in ctx.Generos
-                           where g.descripcion == pelicula.genero
-                           select g).FirstOrDefault();
+            Generos gen = GeneroService.getGeneroByDesc(pelicula.genero);
 
-            Peliculas peli = (from p in ctx.Peliculas
-                           where p.idPelicula == pelicula.idPelicula
-                           select p).FirstOrDefault();
+            Peliculas peli = PeliculaService.getPeliculaById(ctx, pelicula.idPelicula);
 
             PeliculaService.setDatosPeli(peli, pelicula, gen.idGenero);
 
@@ -83,10 +77,8 @@ namespace Servicio
         public static void eliminarPelicula(int idPeli){
             Context ctx = new Context();
 
-            Peliculas peli = (from p in ctx.Peliculas
-                              where p.idPelicula == idPeli
-                              select p).FirstOrDefault();
-
+            Peliculas peli = PeliculaService.getPeliculaById(ctx, idPeli);
+            
             ctx.Peliculas.Remove(peli);
             ctx.SaveChanges();
 
@@ -99,10 +91,11 @@ namespace Servicio
 
             var peliculas = new List<Pelicula>();
 
+            //Levanto todos los generos y luego en el for solo filtro el List 
+            // sino deberia invocar dentro del for al contexto para pedir el Genero indicado
+            // pero seria menos performante
+            List<Generos> generos = GeneroService.getGeneros();
 
-
-            List<Generos> generos = (from g in ctx.Generos
-                           select g).ToList();
 
             foreach (Peliculas item in pelis) { 
                 var p = new Pelicula();
@@ -122,6 +115,14 @@ namespace Servicio
             }
 
             return peliculas;
+        }
+
+        private static Peliculas getPeliculaById(Context ctx, int idPeli) {
+
+            Peliculas peli = (from p in ctx.Peliculas
+                              where p.idPelicula == idPeli
+                              select p).FirstOrDefault();
+            return peli;
         }
 
     }

@@ -11,16 +11,19 @@
         <form >
           <div class="mb-3 mt-3">
             <label for="email" class="form-label">Usuario:</label>
-            <input type="email" class="form-control" id="email" placeholder="Ingrese el Usuario" name="email">
+            <%--<input type="email" class="form-control" id="email" placeholder="Ingrese el Usuario" name="email">--%>
+            <asp:TextBox runat="server" ID="TextBoxUsuario" CssClass="form-control"></asp:TextBox>
           </div>
           </br>
           <div class="mb-3">
             <label for="pwd" class="form-label">Contrasenia:</label>
-            <input type="password" class="form-control" id="pwd" placeholder="Ingrese la Contrasenia" name="pswd">
+            <%--<input type="password" class="form-control" id="pwd" placeholder="Ingrese la Contrasenia" name="pswd">--%>
+            <asp:TextBox runat="server" ID="TextBoxFilterPassword" CssClass="form-control" TextMode="Password"></asp:TextBox>
           </div>
           </br>
           <div class="form-check mb-3">
-            <button type="submit" class="btn btn-primary">Ingresar</button>
+              <asp:Button runat="server" CssClass="btn btn-primary" ID="BtnIngreso" Text="Ingresar" onclick="BtnIngreso_Click"/>
+            <%--<button type="submit" class="btn btn-primary">Ingresar</button>--%>
           </div>
         </form>
     </div>

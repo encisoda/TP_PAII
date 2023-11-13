@@ -5,7 +5,6 @@
 
     <h3>Peliculas</h3>
     <asp:Button runat="server" ID="btnAgregar" CssClass="btn btn-success mb-2" Text="Agregar" OnClick="BtnCreate_Click"/>
-    <%--<button type="button" class="btn btn-success mb-2" id="btnAgregar" data-toggle="modal"  data-target="#agregarModal">Agregar +</button>--%>
     <hr>
     <h4>Filtros</h4>
     <form class="form-inline">
@@ -14,7 +13,6 @@
                 <div class="col-sm-3">
                     <label for="filtroTitulo" class="sr-only">Titulo:</label>
                     <asp:TextBox runat="server" ID="TextBoxFilterTitulo" CssClass="form-control"></asp:TextBox>
-                    <%--<input type="text" class="form-control" placeholder="Ingresar titulo" name="titulo" id="titulo">--%>
                 </div>
                 <div class="col-sm-3">
                     <label for="genero" class="sr-only">Genero:</label>
@@ -23,7 +21,6 @@
                     </asp:DropDownList>
                 </div>
             <div class="col-sm-4">
-                <%--<button type="button" class="btn btn-secondary mb-2" id="btnLimpiar">Limpiar</button>--%>
                 <asp:LinkButton ID="BtnLimpiarFiltros" runat="server" OnClick="ButtonLimpiarFiltrar_Click" Text="<span class='glyphicon glyphicon-repeat'></span>" CssClass="btn btn-secondary mb-2"/>
                 <asp:Button ID="BtnFiltar" runat="server" OnClick="ButtonFiltrar_Click" Text="Filtrar" CssClass="btn btn-primary mb-2"/>
             </div>

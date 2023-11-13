@@ -13,5 +13,15 @@ namespace WebApplication
         {
 
         }
+
+        protected void BtnLogout_Click(object sender, EventArgs e)
+        {
+
+            Session["Usuario"] = "";
+            Session["Logeado"] = false;
+
+            Response.Redirect("Default.aspx");
+
+        }
     }
 }

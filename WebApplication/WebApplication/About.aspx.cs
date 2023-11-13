@@ -16,6 +16,12 @@ namespace WebApplication
         {
             if (!IsPostBack)
             {
+
+                if (!(bool)Session["Logeado"])
+                {
+                    Response.Redirect("Default.aspx");
+                }
+
                 this.actualziarTabla();
                 var generos = GeneroService.getGenerosDes();
                 foreach (string genero in generos)

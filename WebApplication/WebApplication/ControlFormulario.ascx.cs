@@ -32,7 +32,6 @@ namespace WebApplication
             set
             {
                 ddgenero.Items.Add(value);
-
                 ddgenero.SelectedValue = value;
             }
 

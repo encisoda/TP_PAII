@@ -51,9 +51,16 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/About">Peliculas</a></li>
+                        <% if (Session["Logeado"] != null && (bool)Session["Logeado"]) { %>
+                            <li><a runat="server" href="~/About">Peliculas</a></li>
+                        <% } %>
                         <li><a runat="server" href="~/Contact">Grupo</a></li>
                     </ul>
+                     <% if (Session["Logeado"] != null && (bool)Session["Logeado"]) { %>
+                        <p class="navbar-text navbar-right">Usuario: <%= Session["Usuario"] %>
+                            <asp:LinkButton ID="BtnLogout" runat="server" OnClick="BtnLogout_Click" Text="<span class='glyphicon glyphicon-off'></span>" CssClass="btn form-control-md btn-Light"/>
+                        </p>
+                     <% } %>
                 </div>
             </div>
         </div>

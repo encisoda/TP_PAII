@@ -11,8 +11,6 @@
             <form >
                 <uc1:ControlFormulario runat="server" id="ControlFormulario" />
                 <%--<asp:TextBox runat="server" ID="tbtitulo" CssClass="form-control"></asp:TextBox>--%>
-                        
-                    
                 <br/>
                 <div class="row justify-content-end">
                     <div class="col-md-6 mb-3">
@@ -22,6 +20,5 @@
                     </div>
                 </div>
             </form>
-            
         </div>
 </asp:Content>

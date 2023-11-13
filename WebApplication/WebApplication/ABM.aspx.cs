@@ -39,7 +39,7 @@ namespace WebApplication
                             this.BtnCreate.Visible = true;
                             break;
                         case "M":
-                            this.lbltitulo.Text = "Modificar elicula";
+                            this.lbltitulo.Text = "Modificar pelicula";
                             this.BtnUpdate.Visible = true;
                             break;
                     }
@@ -76,7 +76,7 @@ namespace WebApplication
 
             ControlFormulario.tbtituloResultado = pelicula.titulo;
             ControlFormulario.ddgeneroResultado = pelicula.genero;
-            ControlFormulario.tbestrenoResultado = DateTime.Now.ToString(pelicula.Estreno);
+            ControlFormulario.tbestrenoResultado = DateTime.Parse(pelicula.Estreno).ToString("yyyy-MM-dd");
             ControlFormulario.tbpaisResultado = pelicula.Pais;
             ControlFormulario.tbproductoraResultado = pelicula.Productora;
             ControlFormulario.tbduracionResultado = (pelicula.Duracion).ToString();

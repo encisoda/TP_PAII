@@ -129,11 +129,14 @@ namespace Servicio
             Context ctx = new Context();
             var peli = PeliculaService.getPeliculaById(ctx, idPelicula);
 
-            List<Generos> generos = GeneroService.getGeneros();
+            var gen = GeneroService.getGeneroById(peli.idGenero);
+
+            //List<Generos> generos = GeneroService.getGeneros();
 
             var p = new Pelicula();
             p.idPelicula = peli.idPelicula;
-            p.genero = generos.Where(g => g.idGenero == peli.idGenero).FirstOrDefault().descripcion;
+            //p.genero = generos.Where(g => g.idGenero == peli.idGenero).FirstOrDefault().descripcion;
+            p.genero = gen.descripcion;
             p.titulo = peli.titulo;
             p.Estreno = peli.estreno.ToString();
             p.Pais = peli.pais;

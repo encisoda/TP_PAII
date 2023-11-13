@@ -54,25 +54,17 @@ namespace WebApplication
 
         private void actualziarTabla() 
         {
-            var ListaPeliculas = new List<Pelicula>();
 
-            foreach (Pelicula peli in PeliculaService.listarPeliculas())
-                ListaPeliculas.Add(peli);
-
+            List<Pelicula> ListaPeliculas = PeliculaService.listarPeliculas();
             GridViewPeliculas.DataSource = ListaPeliculas;
             GridViewPeliculas.DataBind();
         }
 
         private void filtrarTabla()
         {
-            var ListaPeliculas = new List<Pelicula>();
-
-            foreach (Pelicula peli in PeliculaService.listarPeliculas())
-                ListaPeliculas.Add(peli);
-
+            List<Pelicula> ListaPeliculas = PeliculaService.listarPeliculas();
             var listaFiltra = ListaPeliculas.Where(p => p.titulo.IndexOf(TextBoxFilterTitulo.Text, StringComparison.OrdinalIgnoreCase) >= 0
             && p.genero.IndexOf(DropDownListFiltro.Text, StringComparison.OrdinalIgnoreCase) >= 0).ToList();   
-
             GridViewPeliculas.DataSource = listaFiltra;
             GridViewPeliculas.DataBind();
         }

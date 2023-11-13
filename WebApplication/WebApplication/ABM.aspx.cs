@@ -35,7 +35,7 @@ namespace WebApplication
                     switch (sOpc)
                     {
                         case "A":
-                            this.lbltitulo.Text = "Agregar nuevo pelicula";
+                            this.lbltitulo.Text = "Agregar nueva pelicula";
                             this.BtnCreate.Visible = true;
                             break;
                         case "M":

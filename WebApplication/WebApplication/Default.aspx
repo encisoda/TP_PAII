@@ -10,7 +10,7 @@
           </div>
           </br>
           <div class="mb-3">
-            <label for="pwd" class="form-label">Contrasenia:</label>
+            <label for="pwd" class="form-label">Contraseña:</label>
             <asp:TextBox runat="server" ID="TextBoxFilterPassword" CssClass="form-control" TextMode="Password"></asp:TextBox>
           </div>
           </br>

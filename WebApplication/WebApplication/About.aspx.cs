@@ -17,6 +17,12 @@ namespace WebApplication
             if (!IsPostBack)
             {
                 this.actualziarTabla();
+                var generos = GeneroService.getGenerosDes();
+                foreach (string genero in generos)
+                {
+                    DropDownListFiltro.Items.Add(genero);
+                }
+
             }
         }
 
@@ -63,6 +69,13 @@ namespace WebApplication
 
             GridViewPeliculas.DataSource = listaFiltra;
             GridViewPeliculas.DataBind();
+        }
+
+        protected void ButtonLimpiarFiltrar_Click(object sender, EventArgs e)
+        {
+            TextBoxFilterTitulo.Text = "";
+            DropDownListFiltro.SelectedValue = "";
+            this.filtrarTabla();
         }
 
         protected void BtnBorrar_Click(object sender, EventArgs e)

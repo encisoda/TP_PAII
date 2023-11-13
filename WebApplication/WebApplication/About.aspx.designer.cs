@@ -42,13 +42,22 @@ namespace WebApplication
         protected global::System.Web.UI.WebControls.DropDownList DropDownListFiltro;
 
         /// <summary>
-        /// Control ButtonFiltar.
+        /// Control BtnLimpiarFiltros.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonFiltar;
+        protected global::System.Web.UI.WebControls.LinkButton BtnLimpiarFiltros;
+
+        /// <summary>
+        /// Control BtnFiltar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button BtnFiltar;
 
         /// <summary>
         /// Control GridViewPeliculas.

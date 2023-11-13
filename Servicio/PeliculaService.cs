@@ -45,11 +45,8 @@ namespace Servicio
             return peli;
         }
 
-
-
-
-        public static void agregarPelicula(Pelicula pelicula){
-
+        public static void agregarPelicula(Pelicula pelicula)
+        {
             Context ctx = new Context();
             Peliculas newPeli = new Peliculas();
 
@@ -61,7 +58,8 @@ namespace Servicio
             ctx.SaveChanges();  
         }
 
-        public static void actualizarPelicula(Pelicula pelicula) {
+        public static void actualizarPelicula(Pelicula pelicula) 
+        {
             Context ctx = new Context();
 
             Generos gen = GeneroService.getGeneroByDesc(pelicula.genero);
@@ -71,20 +69,20 @@ namespace Servicio
             PeliculaService.setDatosPeli(peli, pelicula, gen.idGenero);
 
             ctx.SaveChanges();
-
         }
 
-        public static void eliminarPelicula(int idPeli){
+        public static void eliminarPelicula(int idPeli)
+        {
             Context ctx = new Context();
 
             Peliculas peli = PeliculaService.getPeliculaById(ctx, idPeli);
             
             ctx.Peliculas.Remove(peli);
             ctx.SaveChanges();
-
         }
 
-        public static List<Pelicula> listarPeliculas() {
+        public static List<Pelicula> listarPeliculas()
+        {
             Context ctx = new Context();
             List<Peliculas> pelis = (from p in ctx.Peliculas
                               select p).ToList();
@@ -96,8 +94,8 @@ namespace Servicio
             // pero seria menos performante
             List<Generos> generos = GeneroService.getGeneros();
 
-
-            foreach (Peliculas item in pelis) { 
+            foreach (Peliculas item in pelis) 
+            { 
                 var p = new Pelicula();
                 p.idPelicula = item.idPelicula;
                 p.genero = generos.Where(g => g.idGenero == item.idGenero).FirstOrDefault().descripcion;
@@ -117,12 +115,36 @@ namespace Servicio
             return peliculas;
         }
 
-        private static Peliculas getPeliculaById(Context ctx, int idPeli) {
+        private static Peliculas getPeliculaById(Context ctx, int idPeli)
+        {
 
             Peliculas peli = (from p in ctx.Peliculas
                               where p.idPelicula == idPeli
                               select p).FirstOrDefault();
             return peli;
+        }
+
+        public static Pelicula getPeliculaID(int idPelicula) 
+        {
+            Context ctx = new Context();
+            var peli = PeliculaService.getPeliculaById(ctx, idPelicula);
+
+            List<Generos> generos = GeneroService.getGeneros();
+
+            var p = new Pelicula();
+            p.idPelicula = peli.idPelicula;
+            p.genero = generos.Where(g => g.idGenero == peli.idGenero).FirstOrDefault().descripcion;
+            p.titulo = peli.titulo;
+            p.Estreno = peli.estreno.ToString();
+            p.Pais = peli.pais;
+            p.Duracion = (int)peli.duracion;
+            p.Director = peli.director;
+            p.Calificacion = peli.calificación;
+            p.Idioma = peli.Idioma;
+            p.Restriccion = (int)peli.restricción;
+            p.Productora = peli.productora;
+
+            return p;
         }
 
     }

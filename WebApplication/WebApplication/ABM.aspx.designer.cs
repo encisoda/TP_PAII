@@ -60,6 +60,24 @@ namespace WebApplication
         protected global::System.Web.UI.WebControls.TextBox tbestreno;
 
         /// <summary>
+        /// Control rfvEstreno.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEstreno;
+
+        /// <summary>
+        /// Control rvEstreno.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvEstreno;
+
+        /// <summary>
         /// Control tbpais.
         /// </summary>
         /// <remarks>
@@ -67,6 +85,15 @@ namespace WebApplication
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbpais;
+
+        /// <summary>
+        /// Control rfvPais.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPais;
 
         /// <summary>
         /// Control tbproductora.
@@ -78,6 +105,15 @@ namespace WebApplication
         protected global::System.Web.UI.WebControls.TextBox tbproductora;
 
         /// <summary>
+        /// Control rfvProductora.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvProductora;
+
+        /// <summary>
         /// Control tbduracion.
         /// </summary>
         /// <remarks>
@@ -85,6 +121,15 @@ namespace WebApplication
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbduracion;
+
+        /// <summary>
+        /// Control rfvDuracion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDuracion;
 
         /// <summary>
         /// Control tbdirector.
@@ -96,6 +141,15 @@ namespace WebApplication
         protected global::System.Web.UI.WebControls.TextBox tbdirector;
 
         /// <summary>
+        /// Control rfvDirector.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvDirector;
+
+        /// <summary>
         /// Control tbcalificacion.
         /// </summary>
         /// <remarks>
@@ -103,6 +157,24 @@ namespace WebApplication
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbcalificacion;
+
+        /// <summary>
+        /// Control rfvCalificacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvCalificacion;
+
+        /// <summary>
+        /// Control rvCalificacion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvCalificacion;
 
         /// <summary>
         /// Control tbidioma.
@@ -114,6 +186,15 @@ namespace WebApplication
         protected global::System.Web.UI.WebControls.TextBox tbidioma;
 
         /// <summary>
+        /// Control rfvIdioma.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvIdioma;
+
+        /// <summary>
         /// Control tbrestriccion.
         /// </summary>
         /// <remarks>
@@ -121,6 +202,24 @@ namespace WebApplication
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox tbrestriccion;
+
+        /// <summary>
+        /// Control rfvRestriccion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvRestriccion;
+
+        /// <summary>
+        /// Control rvRestriccion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator rvRestriccion;
 
         /// <summary>
         /// Control BtnCreate.
@@ -139,23 +238,5 @@ namespace WebApplication
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnUpdate;
-
-        /// <summary>
-        /// Control BtnDelete.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnDelete;
-
-        /// <summary>
-        /// Control BtnVolver.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnVolver;
     }
 }

@@ -17,7 +17,7 @@ namespace WebApplication
 
                 if (Session["Logeado"] != null && (bool)Session["Logeado"])
                 {
-                    Response.Redirect("About.aspx");
+                    Response.Redirect("Peliculas.aspx");
                 }
 
             }
@@ -33,7 +33,11 @@ namespace WebApplication
 
             if ((bool)Session["Logeado"])
             {
-                Response.Redirect("About.aspx");
+                Response.Redirect("Peliculas.aspx");
+            }
+            else
+            {
+                LblMensajeError.Text = "Usuario o contraseña incorrecta";
             }
 
         }

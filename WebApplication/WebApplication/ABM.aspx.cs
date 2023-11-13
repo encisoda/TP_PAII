@@ -35,11 +35,11 @@ namespace WebApplication
                     switch (sOpc)
                     {
                         case "A":
-                            this.lbltitulo.Text = "Ingresar nuevo usuario";
+                            this.lbltitulo.Text = "Agregar nuevo pelicula";
                             this.BtnCreate.Visible = true;
                             break;
                         case "M":
-                            this.lbltitulo.Text = "Modificar usuario";
+                            this.lbltitulo.Text = "Modificar elicula";
                             this.BtnUpdate.Visible = true;
                             break;
                     }
@@ -53,7 +53,7 @@ namespace WebApplication
             var pelicula = this.PeliculaSeteada();
 
             PeliculaService.agregarPelicula(pelicula);
-            Response.Redirect("About.aspx");
+            Response.Redirect("Peliculas.aspx");
 
         }
 
@@ -64,7 +64,7 @@ namespace WebApplication
             pelicula.idPelicula = int.Parse(Request.QueryString["id"]);
 
             PeliculaService.actualizarPelicula(pelicula);
-            Response.Redirect("About.aspx");
+            Response.Redirect("Peliculas.aspx");
 
         }
 

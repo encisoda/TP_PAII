@@ -47,7 +47,7 @@
                 <div>
                     <asp:LinkButton ID="BtnModificar" runat="server" OnClick="BtnModificar_Click" Text="<span class='glyphicon glyphicon-pencil'></span>" CssClass="btn form-control-sm btn-warning">
                         </asp:LinkButton>
-                    <asp:LinkButton ID="BtnBorrar" runat="server" OnClick="BtnBorrar_Click" Text="<span class='glyphicon glyphicon-trash'></span>" CssClass="btn form-control-sm btn-danger">
+                    <asp:LinkButton ID="BtnBorrar" runat="server" OnClientClick="return confirm('Estas seguro que desea eliminar la pelicula?')" OnClick="BtnBorrar_Click" Text="<span class='glyphicon glyphicon-trash'></span>" CssClass="btn form-control-sm btn-danger">
                         </asp:LinkButton>
                 </div>
             </ItemTemplate>

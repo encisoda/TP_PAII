@@ -8,12 +8,15 @@
                                     ErrorMessage="El título es obligatorio" Display="Dynamic" CssClass="text-danger" />
         </div>
         <div class="col-md-6 mb-3">
-            <label for="genero" class="form-label">Género:</label>
-            <asp:DropDownList ID="ddgenero" runat="server" CssClass="form-control">
-                <asp:ListItem Text="-- Selecciona un género --" Value="" />
-            </asp:DropDownList>
-            <asp:RequiredFieldValidator ID="rfvGenero" runat="server" ControlToValidate="ddgenero" 
-                ErrorMessage="El género es obligatorio" Display="Dynamic" CssClass="text-danger" InitialValue="" />
+           <label for="genero" class="form-label">Género:</label>
+           <div style="display:flex;">           
+                <asp:DropDownList ID="ddgenero" runat="server" CssClass="form-control">
+                    <asp:ListItem Text="-- Selecciona un género --" Value="" />
+                </asp:DropDownList>
+                <asp:Button runat="server" ID="btnGeneros" CausesValidation="false" Text="+" OnClick="IrAGeneros"/>
+                <asp:RequiredFieldValidator ID="rfvGenero" runat="server" ControlToValidate="ddgenero" 
+                    ErrorMessage="El género es obligatorio" Display="Dynamic" CssClass="text-danger" InitialValue="" />
+            </div>
         </div>
     </div>
     <div class="row">

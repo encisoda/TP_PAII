@@ -13,7 +13,7 @@ namespace Datos
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Context : DbContext
+    public partial class Context : DbContext, IApplicationDbContext
     {
         public Context()
             : base("name=Context")
@@ -28,5 +28,15 @@ namespace Datos
         public virtual DbSet<Generos> Generos { get; set; }
         public virtual DbSet<Peliculas> Peliculas { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
+    }
+
+    public interface IApplicationDbContext
+    {
+        DbSet<Generos> Generos { get; set; }
+        DbSet<Peliculas> Peliculas { get; set; }
+        DbSet<Usuarios> Usuarios { get; set; }
+
+        int SaveChanges();
+        // Agrega otros métodos si es necesario
     }
 }

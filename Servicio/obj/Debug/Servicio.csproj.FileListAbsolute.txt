@@ -43,3 +43,13 @@ C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\Servicio\obj\Debug\Servicio.csproj.Cor
 C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\Servicio\obj\Debug\Servicio.csproj.CopyComplete
 C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\Servicio\obj\Debug\Servicio.dll
 C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\Servicio\obj\Debug\Servicio.pdb
+C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\Servicio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\Servicio\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\Servicio\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\Servicio\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\Servicio\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\Servicio\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\Servicio\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\Servicio\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\Servicio\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\SSPV\Desktop\PAII\Ultimo\TP_PAII\Servicio\bin\Debug\System.Threading.Tasks.Extensions.xml

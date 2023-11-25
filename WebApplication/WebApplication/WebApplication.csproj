@@ -113,6 +113,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ABM.aspx" />
+    <Content Include="ABMGeneros.aspx" />
+    <Content Include="Generos.aspx" />
     <Content Include="Peliculas.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -176,7 +178,21 @@
     <Compile Include="ABM.aspx.designer.cs">
       <DependentUpon>ABM.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ABMGeneros.aspx.cs">
+      <DependentUpon>ABMGeneros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ABMGeneros.aspx.designer.cs">
+      <DependentUpon>ABMGeneros.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="Generos.aspx.cs">
+      <DependentUpon>Generos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Generos.aspx.designer.cs">
+      <DependentUpon>Generos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Peliculas.aspx.cs">
       <DependentUpon>Peliculas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

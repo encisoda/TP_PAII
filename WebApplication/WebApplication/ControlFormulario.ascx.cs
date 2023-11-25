@@ -136,13 +136,20 @@ namespace WebApplication
         {
             if (!IsPostBack)
             {
-                var generos = GeneroService.getGenerosDes();
+                var generosService = new GeneroService();
+
+                var generos = generosService.getGenerosDes();
                 foreach (string genero in generos)
                 {
                     ddgenero.Items.Add(genero);
                 }
 
             }
+
+        }
+        protected void IrAGeneros(object sender, EventArgs e)
+        {
+            Response.Redirect("Generos.aspx");
         }
     }
 }

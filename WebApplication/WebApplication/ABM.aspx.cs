@@ -1,4 +1,6 @@
-﻿using Servicio;
+﻿
+using Datos;
+using Servicio;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +14,16 @@ namespace WebApplication
     {
         public static string sID = "-1";
         public static string sOpc = "";
+        private PeliculaService _peliculaService;
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            _peliculaService = new PeliculaService();
+
             if (!Page.IsPostBack)
             {
+
                 if (!(bool)Session["Logeado"])
                 {
                     Response.Redirect("Default.aspx");
@@ -52,7 +59,7 @@ namespace WebApplication
 
             var pelicula = this.PeliculaSeteada();
 
-            PeliculaService.agregarPelicula(pelicula);
+            _peliculaService.agregarPelicula(pelicula);
             Response.Redirect("Peliculas.aspx");
 
         }
@@ -63,7 +70,7 @@ namespace WebApplication
             var pelicula = this.PeliculaSeteada();
             pelicula.idPelicula = int.Parse(Request.QueryString["id"]);
 
-            PeliculaService.actualizarPelicula(pelicula);
+            _peliculaService.actualizarPelicula(pelicula);
             Response.Redirect("Peliculas.aspx");
 
         }
@@ -72,7 +79,7 @@ namespace WebApplication
         {
 
             Pelicula pelicula;
-            pelicula = PeliculaService.getPeliculaID(int.Parse(id));          
+            pelicula = _peliculaService.getPeliculaID(int.Parse(id));          
 
             ControlFormulario.tbtituloResultado = pelicula.titulo;
             ControlFormulario.ddgeneroResultado = pelicula.genero;

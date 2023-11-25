@@ -6,11 +6,16 @@ namespace Servicio
 {
     public class UsuarioService {
 
-        public static (string, bool) validarLogin(string usuario, string password){
+        private readonly IApplicationDbContext _context;
+        
+        public UsuarioService()
+        {
+            _context = new Context();
+            
+        }
+        public (string, bool) validarLogin(string usuario, string password){
 
-            Context ctx = new Context();
-
-            var usu = UsuarioService.getUsuario(ctx, usuario);
+            var usu = this.getUsuario(usuario);
 
             if (usu is null) {
                 return ("El usuario no existe.", false);
@@ -24,9 +29,9 @@ namespace Servicio
             
         }
 
-        private static Usuarios getUsuario(Context ctx, string usuario){
+        private Usuarios getUsuario(string usuario){
 
-            Usuarios usu= (from u in ctx.Usuarios
+            Usuarios usu= (from u in _context.Usuarios
                            where u.usuario == usuario
                            select u).FirstOrDefault();
             return usu;

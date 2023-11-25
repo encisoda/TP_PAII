@@ -53,7 +53,9 @@
                     <ul class="nav navbar-nav">
                         <% if (Session["Logeado"] != null && (bool)Session["Logeado"]) { %>
                             <li><a runat="server" href="~/Peliculas">Peliculas</a></li>
+                            <li><a runat="server" href="~/Generos">Generos</a></li>
                         <% } %>
+               
                         <li><a runat="server" href="~/Contact">Grupo</a></li>
                     </ul>
                      <% if (Session["Logeado"] != null && (bool)Session["Logeado"]) { %>

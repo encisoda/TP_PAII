@@ -45,7 +45,7 @@ namespace WebApplication
 
         protected void BtnBorrar_Click(object sender, EventArgs e)
         {
-            string genero;
+
             LinkButton BtnConsultar = (LinkButton)sender;
             GridViewRow selectedrow = (GridViewRow)BtnConsultar.NamingContainer;
             int id = int.Parse(selectedrow.Cells[0].Text);

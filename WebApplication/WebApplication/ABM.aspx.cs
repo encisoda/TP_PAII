@@ -58,9 +58,11 @@ namespace WebApplication
         {
 
             var pelicula = this.PeliculaSeteada();
-
-            _peliculaService.agregarPelicula(pelicula);
-            Response.Redirect("Peliculas.aspx");
+            if (Page.IsValid)
+            {
+                _peliculaService.agregarPelicula(pelicula);
+                Response.Redirect("Peliculas.aspx");
+            }
 
         }
 

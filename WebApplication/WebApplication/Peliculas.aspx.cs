@@ -19,10 +19,10 @@ namespace WebApplication
         {
             _peliculaService = new PeliculaService();
             _generoService = new GeneroService();
+            TextBoxFilterTitulo.Focus();
 
             if (!IsPostBack)
-            {
-
+            {             
                 if (!(bool)Session["Logeado"])
                 {
                     Response.Redirect("Default.aspx");

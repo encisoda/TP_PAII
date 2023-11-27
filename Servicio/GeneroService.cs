@@ -17,7 +17,7 @@ namespace Servicio
     }
     public class GeneroService
     {
-        private readonly IApplicationDbContext _context;
+        private readonly Context _context;
         public GeneroService()
         {
             _context = new Context(); 

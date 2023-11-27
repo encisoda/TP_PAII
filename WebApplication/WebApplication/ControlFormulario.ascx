@@ -13,7 +13,8 @@
                 <asp:DropDownList ID="ddgenero" runat="server" CssClass="form-control">
                     <asp:ListItem Text="-- Selecciona un género --" Value="" />
                 </asp:DropDownList>
-                <asp:Button runat="server" ID="btnGeneros" CausesValidation="false" Text="+" OnClick="IrAGeneros"/>
+                &nbsp;
+                <asp:Button runat="server" ID="btnGeneros" CssClass="btn btn-success" CausesValidation="false" Text="+" OnClick="IrAGeneros"/>
                 <asp:RequiredFieldValidator ID="rfvGenero" runat="server" ControlToValidate="ddgenero" 
                     ErrorMessage="El género es obligatorio" Display="Dynamic" CssClass="text-danger" InitialValue="" />
             </div>

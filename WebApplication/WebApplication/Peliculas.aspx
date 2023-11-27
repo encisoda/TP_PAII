@@ -54,7 +54,17 @@
         </asp:TemplateField>
     </Columns>
     </asp:GridView>
-    
+
+  <script>
+    $("form").keypress(function (e) {
+        
+        if (e.which == 13) {
+            event.preventDefault()
+            event.stopPropagation()
+            document.getElementById("<%=BtnFiltar.ClientID%>").click();
+        }
+    });
+  </script>  
 </asp:Content>
 
 

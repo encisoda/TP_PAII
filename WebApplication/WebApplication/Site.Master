@@ -71,7 +71,8 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - CINEFILIA 3000 - Grupo 3 - ASP.NET</p>
+                <p>&copy; 2023 - CINEFILIA 3000 - Grupo 3 - ASP.NET</p>
+
             </footer>
         </div>
 

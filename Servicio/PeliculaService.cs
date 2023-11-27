@@ -29,7 +29,7 @@ namespace Servicio
 
     public class PeliculaService
     {
-        private readonly IApplicationDbContext _context;
+        private readonly Context _context;
         private GeneroService _generoService;
 
         private Peliculas setDatosPeli(Peliculas peli, Pelicula pelicula, int idGenero) {
@@ -95,7 +95,8 @@ namespace Servicio
         public List<Pelicula> listarPeliculas()
         {
             List<Peliculas> pelis = (from p in _context.Peliculas
-                              select p).ToList();
+                                     orderby p.idPelicula descending
+                                     select p).ToList();
 
             var peliculas = new List<Pelicula>();
 

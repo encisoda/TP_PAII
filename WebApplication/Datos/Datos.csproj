@@ -65,8 +65,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
-    <Compile Include="ConfigureServices.cs" />
     <Compile Include="Generos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

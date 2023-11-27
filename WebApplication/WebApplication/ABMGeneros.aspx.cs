@@ -63,15 +63,17 @@ namespace WebApplication
         {
 
             var exist = _generoService.getGeneroByDesc(ddgenero.Text);
-
-            if (exist == null)
+            if (Page.IsValid)
             {
-                var generoDTO = new GeneroDTO();
-                generoDTO.genero = ddgenero.Text;
+                if (exist == null)
+                {
+                    var generoDTO = new GeneroDTO();
+                    generoDTO.genero = ddgenero.Text;
 
-                _generoService.agregarGenero(generoDTO);
-                Response.Redirect("Generos.aspx");
-                return;
+                    _generoService.agregarGenero(generoDTO);
+                    Response.Redirect("Generos.aspx");
+                    return;
+                }
             }
 
             msjError.Text = "El Genero ingresado ya existe!";
@@ -89,9 +91,11 @@ namespace WebApplication
             generoDTO.idGenero = idGenero;
             generoDTO.genero = ddgenero.Text;
 
-            _generoService.actualizarGenero(generoDTO);
-            Response.Redirect("Generos.aspx");
-
+            if (Page.IsValid)
+            {
+                _generoService.actualizarGenero(generoDTO);
+                Response.Redirect("Generos.aspx");
+            }
         }
     }
 }

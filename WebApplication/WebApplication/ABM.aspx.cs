@@ -72,8 +72,11 @@ namespace WebApplication
             var pelicula = this.PeliculaSeteada();
             pelicula.idPelicula = int.Parse(Request.QueryString["id"]);
 
-            _peliculaService.actualizarPelicula(pelicula);
-            Response.Redirect("Peliculas.aspx");
+            if(Page.IsValid)
+            {
+                _peliculaService.actualizarPelicula(pelicula);
+                Response.Redirect("Peliculas.aspx");
+            }
 
         }
 
